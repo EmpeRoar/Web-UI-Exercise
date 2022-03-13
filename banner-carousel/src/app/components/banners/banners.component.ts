@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./banners.component.scss']
 })
 export class BannersComponent implements OnInit {
-
+  current:number = 0;
   @Input('items') items?: any[];
   constructor() { }
 
@@ -14,11 +14,23 @@ export class BannersComponent implements OnInit {
   }
 
   goLeft() {
-    console.log('Left');
+    if(this.items) {
+      if(this.current > 0) {
+        this.current--;
+      } else {
+        this.current=this.items?.length-1;
+      }
+    }
   }
 
   goRight() {
-    console.log('Right');
+    if(this.items) {
+      if(this.current < this.items?.length-1) {
+        this.current++;
+      } else {
+        this.current=0;
+      }
+    }
   }
 
 }
