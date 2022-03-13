@@ -1,6 +1,19 @@
-<div *ngIf="items" class="banner">
-    {{items[current].title}}
-</div>
+
+<ng-container *ngIf="items">
+    <div class="banner">
+        <div class="item">
+            {{getLeftStage().title}}
+        </div>
+        <div  class="item">
+            {{getStage().title}}
+        </div>
+        <div  class="item">
+            {{getRightStage().title}}
+        </div>
+        
+    </div>
+    
+</ng-container>
 
 <button (click)="goLeft()">Left</button>
 <button (click)="goRight()">Right</button>

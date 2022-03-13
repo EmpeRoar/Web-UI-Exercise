@@ -1,7 +1,10 @@
 .banner {
-    background-color: pink;
-    height: 100px;
-    width: 500px;
-    text-align: center;
-    padding-top: 20%;
+    display: flex;
+    .item {
+        background-color: pink;
+        height: 100px;
+        width: 500px;
+        text-align: center;
+        padding-top: 20%;
+    }
 }
