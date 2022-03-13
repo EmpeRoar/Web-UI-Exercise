@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'banner-carousel';
+
+  items: any[] = [
+    { title: 'banner 01' },
+    { title: 'banner 02' },
+    { title: 'banner 03' },
+    { title: 'banner 04' },
+    { title: 'banner 05' }
+  ];
 }
