@@ -1,9 +1,15 @@
+import { trigger } from '@angular/animations';
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-banners',
   templateUrl: './banners.component.html',
-  styleUrls: ['./banners.component.scss']
+  styleUrls: ['./banners.component.scss'],
+  animations: [
+    trigger('leftRight', [
+      
+    ])
+  ]
 })
 export class BannersComponent implements OnInit, AfterViewInit {
   current:number = 0;
